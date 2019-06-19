@@ -1,0 +1,50 @@
+div.side-menu {
+    --header-background-color: #bfbfbf;
+    --background-color: #d9d9d9;
+
+    position: absolute;
+    left: var(--off-canvas-menu-width-minus);
+    top: 0px;
+    width: var(--off-canvas-menu-width);
+    min-height: 100%;
+    background-color: var(--background-color);
+    z-index: 500;
+}
+
+div.side-menu-container {
+    padding: .2rem;
+}
+
+div#side-menu header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .1rem 1rem .2rem 1rem;
+    border: 1px solid #595959;
+    background-color: var(--header-background-color);
+ }
+
+ 
+ div#side-menu section {
+     text-align: left;
+ }
+
+ ul.menu-option-group {
+    list-style: none;
+    padding-left: 1rem;
+    padding-top: 2rem;
+}
+
+span.icon {
+    display: inline-block;
+    width: 1.5rem;
+}
+
+ul.menu-option-group li {
+    padding-top: .5rem;
+}
+ul.menu-option-group li a {
+    color: #262626;
+    text-decoration: none;
+}    
+

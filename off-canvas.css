@@ -1,0 +1,27 @@
+:root {
+    --off-canvas-transition-time: 2000ms;
+    --off-canvas-menu-width: 250px;
+    --off-canvas-menu-width-minus: -250px;
+}    
+
+input#toggle-side-menu {
+    display: none;
+}
+
+/* Hide side menu. */
+input#toggle-side-menu:not(:checked) ~ div.side-menu {
+    transform: translateX(var(--off-canvas-menu-width-minus)); 
+    transform: translate3d(var(--off-canvas-menu-width-minus), 0, 0); 
+    transition: var(--off-canvas-transition-time) ease-out all;
+}
+
+/* Show side menu. */
+input#toggle-side-menu:checked ~ div.side-menu {
+    transform: translateX(var(--off-canvas-menu-width)); 
+    transform: translate3d(var(--off-canvas-menu-width), 0, 0); 
+    transition: var(--off-canvas-transition-time) ease-out all;
+}
+
+.md-icon {
+    font-size: 2rem;
+}

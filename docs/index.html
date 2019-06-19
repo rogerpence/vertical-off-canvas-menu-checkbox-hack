@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="page.css">
+        <link rel="stylesheet" href="side-menu.css">
+        <link rel="stylesheet" href="off-canvas.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    </head>
+
+    <body>        
+        <input type="checkbox" id="toggle-side-menu">
+
+        <!-- 
+        The element containing the side menu must be a sibling
+        of the input:checkbox that governs its display. 
+        -->
+        <div id="side-menu" class="side-menu">
+            <div class="side-menu-container">
+                <header>
+                    <div>
+                        <label for="toggle-side-menu"><i class="md-icon fa fa-angle-left"></i>
+                        </label>        
+                    </div>
+                    <div>
+                        Menu options
+                    </div>
+                </header>
+                <section>
+                    <ul class="menu-option-group">
+                        <li><a href="#"><span class="icon"><i class="fa fa-archive"></i></span> Site overview</a></li>
+                        <li><a href="#"><span class="icon"><i class="fa fa-address-card"></i></span> Account details</a></li>
+                        <li><a href="#"><span class="icon"><i class="fa fa-warehouse"></i></span> Inventory</a></li>
+                        <li><a href="#"><span class="icon"><i class="fab fa-pagelines"></i></span> Grains status</a></li>
+                        <li><a href="#"><span class="icon"><i class="fa fa-shield-alt"></i></span> Sites</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>    
+        <section id="page">
+            <header>
+                <div class="left-position">
+                    <label id="main-side-menu-toggle" for="toggle-side-menu">
+                        <i class="md-icon fa fa-angle-right"></i>
+                    </label>
+                </div>                
+                <div class="middle-position">
+                    Center                        
+                </div>
+                <div class="right-position">
+                    Right
+                </div>        
+            </header>
+            <nav>Navigation</nav>
+            <main>
+                This uses the checkbox hack, not JavaScript to control the menu state.
+                In retrospect, I don't like this technique. JavaScript is mostly likely
+                gonna be needed anyway and the checkbox hack imposes constraint on the HTML structure. 
+                
+            </main>
+            <footer>Footer</footer>
+        </section>    
+    </body>
+</html>
